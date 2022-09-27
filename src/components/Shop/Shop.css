@@ -11,37 +11,7 @@
 }
 
 .cart-container {
-    height: 100vh;
+    /* height: 100vh; */
     padding: 0 10px;
     background: rgba(255, 153, 0, 0.3);
-}
-
-.cart-container h2 {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.cart-details {
-    margin-left: 10px;
-}
-
-.cart-container button {
-    width: 100%;
-    margin-top: 12px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cart-container button:nth-of-type(1) {
-    background: #FF3030;
-}
-
-.cart-container button:nth-of-type(2) {
-    background: #FF9900;
-}
-
-.cart-container button p {
-    margin-right: 8px;
 }
