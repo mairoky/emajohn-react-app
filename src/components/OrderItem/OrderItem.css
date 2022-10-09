@@ -1,0 +1,44 @@
+.order-item {
+    width: 570px;
+    margin: 15px auto;
+    display: flex;
+    border: 1px solid orange;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.order-item .p-img {
+    width: 100px;
+}
+
+.p-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.item-details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15px;
+}
+
+.item-info p {
+    margin: 0;
+}
+
+.btn-delete {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+
+.delete-icon {
+    font-size: 31px;
+    color: #FF3030;
+}

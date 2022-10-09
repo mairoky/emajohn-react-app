@@ -1,17 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb, getFromDb } from '../../utilities/fakedb';
+import { useLoaderData } from 'react-router-dom';
+import { addToDb, deleteShoppingCart, getFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
 
 const Shop = () => {
-    const [products, setProducts] = useState([]);
+
+    const products = useLoaderData();
     const [cart, setCart] = useState([]);
-    useEffect(() => {
-        fetch('products.json')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, []);
+
+    // const [products, setProducts] = useState([]);
+    // useEffect(() => {
+    //     fetch('products.json')
+    //         .then(res => res.json())
+    //         .then(data => setProducts(data))
+    // }, []);
+
+    // clear data from cart & local storage
+    const clearCart = () => {
+        setCart([]);
+        deleteShoppingCart();
+    }
     // get cart data from local storage
     useEffect(() => {
         const storedCart = getFromDb();
@@ -28,7 +38,6 @@ const Shop = () => {
     }, [products]);
     // Event handle for product cart button
     const handleAddToCart = (selectedProduct) => {
-        // console.log(product);
         let newCart = [];
         const exists = cart.find(product => product.id === selectedProduct.id);
         if (!exists) {
@@ -54,7 +63,7 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart} clearCart={clearCart}></Cart>
             </div>
         </div>
     );

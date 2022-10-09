@@ -1,0 +1,10 @@
+.blank-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.blank-page-container {
+    text-align: center;
+}

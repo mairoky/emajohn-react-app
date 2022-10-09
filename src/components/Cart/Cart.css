@@ -16,6 +16,9 @@
     width: 100%;
     margin-top: 12px;
     color: #fff;
+    border-color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;

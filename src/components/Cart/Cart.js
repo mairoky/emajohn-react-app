@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDeleteLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './Cart.css'
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, clearCart }) => {
     let total = 0;
     let shipping = 0;
     let quantity = 0;
@@ -24,7 +24,7 @@ const Cart = ({ cart }) => {
                 <p>Tax: ${tax}</p>
                 <h3>Grand Total: ${grandTotal}</h3>
             </div>
-            <button>
+            <button onClick={clearCart}>
                 <p>Clear Cart</p>
                 <FontAwesomeIcon icon={faDeleteLeft}></FontAwesomeIcon>
             </button>
